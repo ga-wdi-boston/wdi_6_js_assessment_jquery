@@ -34,11 +34,10 @@ $('#dismiss-alert').click(function(event){
 // Make the comment form functional: Typing something into the input and
 // pressing Enter or clicking the Comment button should add a new list item to
 // the list of comments, containing that text.
-$('.new-comment').submit(function(){
-  var text = $('.new-comment-text').val();
+$('form.new-comment').submit(function(event){
+  var text = $(this).children('new-comment-text')[0].val();
   var html = '<li class=comment"">' + text + '</li>';
   $(this).prev().append(html);
-  return false;
 });
 
 
@@ -46,7 +45,7 @@ $('.new-comment').submit(function(){
 ///// Question 5
 // Make it so clicking on a comment list item toggles the class "favorite" on
 // it, including comments that were added after the page loaded.
-$('ul.comments li').each(function(i, e){
-  e.toggleClass('favorite');
-  e.nextAll().toggleClass('favorite');
+$('ul.comments li').click(function(){
+    $(this).toggleClass('favorite');
+    $(this).nextAll().toggleClass('favorite');
 });
