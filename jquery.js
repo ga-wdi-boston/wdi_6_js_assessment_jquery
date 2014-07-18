@@ -4,13 +4,13 @@
 // Make the "Highlight Quotes" link add the class "highlighted" to all quotes
 // within articles (the <q> elements).
 
-$('#highlight-quotes').addClass('highlighted');
+$('#highlight-quotes q').addClass('highlighted');
 
 ///// Question 2
 // Make the "Toggle Articles" link hide or show the content, and only the
 // content, of all articles.
 
-$('#articles').toggleClass('#content');
+$('#articles').toggleClass('.content');
 
 ///// Question 3
 // Make the "Close" link in the alert at the top of the page remove the alert
@@ -28,7 +28,7 @@ $(document).ready(function(){ commentThis.initialize(); });
 var commentThis = {
   initialize: function() {
     var _this = this;
-    $('#new-comment').on('submit', function() {
+    $('.new-comment').on('click', function() {
       event.preventDefault();
 
       _this.addComment();
@@ -41,8 +41,8 @@ var commentThis = {
     if(newComment !== '') {
       console.log('it works!');
       var newComm = $('<li>').text(newComment);
-      $('#comment').append(newComm);
-      $('.comments').val('');
+      $('.comment').append(newComm);
+      $('#comments').val('');
     }
 
   }
@@ -57,7 +57,7 @@ var commentThis = {
 var commentForm = {
   initialize: function() {
     var _this = this;
-    $('#comment').on('click', function() {
+    $('.comment').on('click', function() {
       event.preventDefault();
 
       _this.favoriteComment();
@@ -66,7 +66,7 @@ var commentForm = {
   },
 
   favoriteComment: function(event) {
-    (this).closest('#comment')
+    (this).closest('.comment')
     .toggleClass('favorite');
     }
 
