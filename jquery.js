@@ -3,7 +3,7 @@
 ///// Question 1
 // Make the "Highlight Quotes" link add the class "highlighted" to all quotes
 // within articles (the <q> elements).
-$('#highlighted-quotes').addClass(this.q);
+$('#highlighted-quotes').addClass('highlighted');
 
 ///// Question 2
 // Make the "Toggle Articles" link hide or show the content, and only the
