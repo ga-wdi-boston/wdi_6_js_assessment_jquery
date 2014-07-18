@@ -7,7 +7,7 @@ $('#highlight-quotes').click(function(event){
   $('article q').addClass('highlighted');
   event.preventDefault();
 });
-
+// score 1 of 1
 
 
 ///// Question 2
@@ -17,7 +17,7 @@ $('#toggle-articles').click(function(event){
   $('article .content').toggle();
   event.preventDefault();
 });
-
+// score 2 of 2
 
 
 ///// Question 3
@@ -27,7 +27,7 @@ $('#dismiss-alert').click(function(event){
   $('.alert').attr('display', 'none');
   event.preventDefault();
 });
-
+// score 2 of 3 - should have used .remove().
 
 
 ///// Question 4
@@ -39,6 +39,7 @@ $('form.new-comment').submit(function(event){
   var html = '<li class=comment"">' + text + '</li>';
   $(this).prev().append(html);
 });
+// score 3 of 4. Not as thorough as the instructor version.
 
 
 
