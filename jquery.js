@@ -43,7 +43,7 @@ $('form').submit(function(event){
 // Make it so clicking on a comment list item toggles the class "favorite" on
 // it, including comments that were added after the page loaded.
 $('.comments').on('click', '.comment', function(event){
-  $(this).addClass('favorite');
+  $(this).toggleClass('favorite');
   event.preventDefault();
 });
 
