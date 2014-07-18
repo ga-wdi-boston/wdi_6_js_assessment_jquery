@@ -16,16 +16,16 @@ $('#articles').toggleClass('#content');
 // Make the "Close" link in the alert at the top of the page remove the alert
 // from the page entirely (don't just hide it).
 
-$('#dismiss-alert').remove();
+$('.dismiss-alert').remove();
 
 ///// Question 4
 // Make the comment form functional: Typing something into the input and
 // pressing Enter or clicking the Comment button should add a new list item to
 // the list of comments, containing that text.
 
-$(document).ready(function(){ commentForm.initialize(); });
+$(document).ready(function(){ commentThis.initialize(); });
 
-var commentForm = {
+var commentThis = {
   initialize: function() {
     var _this = this;
     $('#new-comment').on('submit', function() {
@@ -42,7 +42,7 @@ var commentForm = {
       console.log('it works!');
       var newComm = $('<li>').text(newComment);
       $('#comment').append(newComm);
-      $('#comments').val('');
+      $('.comments').val('');
     }
 
   }
