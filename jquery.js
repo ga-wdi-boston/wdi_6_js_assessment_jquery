@@ -9,6 +9,8 @@ $('document').ready(function() {
     $('q').addClass("highlighted");
   });
 
+  // right
+
 ///// Question 2
 // Make the "Toggle Articles" link hide or show the content, and only the
 // content, of all articles.
@@ -19,6 +21,8 @@ $('document').ready(function() {
     $('article .content').toggle();
   });
 
+  // right
+
 ///// Question 3
 // Make the "Close" link in the alert at the top of the page remove the alert
 // from the page entirely (don't just hide it).
@@ -28,6 +32,8 @@ $('document').ready(function() {
 
     $('.alert').remove();
   });
+
+  // right
 
 ///// Question 4
 // Make the comment form functional: Typing something into the input and
@@ -45,6 +51,8 @@ $('document').ready(function() {
     articleComments.append(newComment);
   });
 
+  // mostly right, forgot a var in line 45
+
 ///// Question 5
 // Make it so clicking on a comment list item toggles the class "favorite" on
 // it, including comments that were added after the page loaded.
@@ -52,5 +60,7 @@ $('document').ready(function() {
   $('.comments').on("click", "li", function() {
     $(this).toggleClass("favorite");
   });
+
+  // right
 
 });
