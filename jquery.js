@@ -37,7 +37,7 @@ $('#dismiss-alert').click(function(event) {
 $('.new-comment').submit(function(event) {
   var value = $('.new-comment-text').val();
   var item = $('li').text(value);
-  $('.comments').append(item);
+  $('.comments').appendTo('ul',item);
   event.preventDefault();
 });
 
