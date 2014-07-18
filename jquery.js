@@ -36,9 +36,9 @@ $('.new-comment').submit(function(event){
 ///// Question 5
 // Make it so clicking on a comment list item toggles the class "favorite" on
 // it, including comments that were added after the page loaded.
-
-//doesn't work
-$('.comment').click(function(event){
+var tog = function(event){
   event.preventDefault();
   this.toggleClass('favorite');
-});
+};
+
+$('.comment').click($.proxy(this.tog,this));
