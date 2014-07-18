@@ -4,13 +4,28 @@
 // Make the "Highlight Quotes" link add the class "highlighted" to all quotes
 // within articles (the <q> elements).
 
+  AssessmentApp = {
+    initialize: function() {
+
+      $('#highlight-quotes').click($('q').highlight("highlight"));
+      $('#toggle-articles').click(this.toggleArticles);
+    },
+
+    toggleArticles: function() {
+      $('#content').toggleClass();
+    }
+
+  };
+
 ///// Question 2
 // Make the "Toggle Articles" link hide or show the content, and only the
 // content, of all articles.
+  // ( see above )
 
 ///// Question 3
 // Make the "Close" link in the alert at the top of the page remove the alert
 // from the page entirely (don't just hide it).
+
 
 ///// Question 4
 // Make the comment form functional: Typing something into the input and
