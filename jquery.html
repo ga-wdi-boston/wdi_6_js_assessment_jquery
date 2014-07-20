@@ -5,23 +5,30 @@
   <title>jQuery Assessment</title>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="jquery.js"></script>
+  <style>
+    .highlighted, .favorite { background-color: yellow; }
+  </style>
 </head>
 <body>
 
 <header>
   <h1 class="logo">News You Can Use</h1>
+  <q class="tagline">Sed interdum facilisis dolor in tempor.</q>
 </header>
 
 <div class="alert">
-  <h2>Notice</h2>
+  <h3>Notice <small><a href="#" class="dismiss-alert">(close)</a></small></h3>
   <p>Maecenas non neque tellus. Quisque erat enim, semper sit amet convallis a, mollis id lorem. Etiam suscipit ultricies orci eget lacinia. Pellentesque rhoncus pulvinar velit in posuere. Vivamus lectus nisl.</p>
-  <a href="#" class="dismiss-alert">Close</a>
+</div>
+
+<div class="alert">
+  <h3>Notice <small><a href="#" class="dismiss-alert">(close)</a></small></h3>
+  <p>Quisque ultrices eu odio et luctus. Duis vitae feugiat nulla. Nulla in arcu neque. Proin vestibulum tristique mattis. Donec sem felis, lobortis vulputate ipsum tristique, dictum imperdiet odio. Cras ut.</p>
 </div>
 
 <section id="sidebar">
   <h2>Options</h2>
   <a href="#" id="toggle-articles">Toggle Articles</a>
-  <a href="#" id="highlight-quotes">Highlight Quotes</a>
 </section>
 
 <section id="articles">
